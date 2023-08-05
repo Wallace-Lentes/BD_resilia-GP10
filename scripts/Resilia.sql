@@ -15,7 +15,7 @@ CREATE TABLE `Cadastro` (
     `telefone` int not null,
     `estado_civil` int not null
 );
-
+-- CRIA UMA TABELA DE FACILITADOR 
 create table `facilitador`(
     `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null,
     `nome_facilitador` VARCHAR(100) not null,
@@ -23,7 +23,7 @@ create table `facilitador`(
     `sexo` VARCHAR(1) not null,
     `data_nasc` date not null
 );
-
+-- CRIA UMA TABELA DE ESTUDANTE 
 create table `estudante`(
     `id_estudante` int AUTO_INCREMENT PRIMARY key not null,
     `nome` VARCHAR(100) not null,
@@ -32,14 +32,14 @@ create table `estudante`(
     `nome_mae` VARCHAR(100) not null,
     `nome_pai` VARCHAR(100) null
 );
-
+-- CRIA UMA TABELA DE TURMA
 create table `turma`(
     `id_turma` int AUTO_INCREMENT PRIMARY key not null,
     `add_turma` VARCHAR(30) not null,
     `data_inicio` date not null,
     `data_termino` date not null
 );
-
+-- CRIA UMA TABELA DE MODULO
 create table `modulo`(
     `id_modulo` int AUTO_INCREMENT PRIMARY key not null,
     `modulo_1` VARCHAR(10) not null,
@@ -48,13 +48,13 @@ create table `modulo`(
     `modulo_4` VARCHAR(10) not null,
     `modulo_5` VARCHAR(10) not null
 );
-
+-- CRIA UMA TABELA DE CURSO
 create table `curso`(
     `id_curso` int AUTO_INCREMENT PRIMARY key not null,
     `nome_curso` VARCHAR(15) not null,
     `valor_curso` double not null
 );
-
+-- CRIA UMA TABELA DE FINANCEIRO
 create table `financeiro` (
     `id_financeiro` int AUTO_INCREMENT PRIMARY key not null,
     `data_vencimento` date not null,
@@ -65,23 +65,23 @@ create table `financeiro` (
     `valor_parcela` double not null,
     `qnt_parcela` int not null
 );
-
+-- CRIA UMA TABELA DE NOTA
 create table `nota`(
     `id_nota` int AUTO_INCREMENT PRIMARY key not null,
     `nota` decimal not null,
     `conceito` VARCHAR(20) not null
 );
-
+-- CRIA UMA TABELA DE FUNCIONARIO
 create table `funcionario`(
     `id_funcionario` int AUTO_INCREMENT PRIMARY key not null,
     `nome_funcionario` VARCHAR(100) not null
 );
-
+-- CRIA UMA TABELA DE CARGO
 create table `cargo`(
     `id_cargo` int AUTO_INCREMENT PRIMARY key not null,
     `nome_cargo` VARCHAR (100) not null
 );
-
+-- CRIA UMA TABELA DE HORARIO 
 create table `horario`(
     `id_horario` int AUTO_INCREMENT PRIMARY key not null,
     `data` date not null,
