@@ -44,7 +44,7 @@ alter table `funcionario` add `id_cadastro` int not null, add foreign key (`id_c
 
 alter table `funcionario` add `id_cargo` int not null, add foreign key (`id_cargo`) references `cargo` (`id_cargo`);
 
-alter table `cargo` add `id_funcionario` int not null, add foreign key (`id_funcionario`) references `funcionario` (`id_funcionario`);
+
 
 
 
