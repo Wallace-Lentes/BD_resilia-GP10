@@ -17,19 +17,11 @@ CREATE TABLE `Cadastro` (
 );
 
 create table `facilitador`(
-    `id_facilitadores` int AUTO_INCREMENT PRIMARY KEY not null;
+    `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null;
     `nome_facilitador` VARCHAR(100) not null,
     `disciplina_facilitador` VARCHAR(50) not null,
     `sexo` VARCHAR(1) not null,
-    `data_nasc` date not null,
-    `id_cargo` int not null,
-    `id_instituicao` int not null,
-    `id_cadastro` int not null,
-    `id_turma` int not null,
-    foreign key (`id_cargo`) references `cargo` (`id_cargo`),
-    foreign key (`id_instituicao`) references `instituicao` (`id_instituicao`),
-    foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`),
-    foreign key (`id_turma`) references `turma` (`id_turma`)    
+    `data_nasc` date not null
 );
 
 create table `estudante`(
@@ -38,31 +30,14 @@ create table `estudante`(
     `sexo` VARCHAR(1) not null,
     `data_nasc` date not null,
     `nome_mae` VARCHAR(100) not null,
-    `nome_pai` VARCHAR(100) null,
-    `id_curso` int not null,
-    `id_instituicao` int not null,
-    `id_cadastro` int not null,
-    `id_turma` int not null,
-    foreign key (`id_curso`) references `curso` (`id_curso`),
-    foreign key (`id_instituicao`) references `instituicao` (`id_instituicao`),
-    foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`),
-    foreign key (`id_turma`) references `turma` (`id_turma`)   
+    `nome_pai` VARCHAR(100) null
 );
 
 create table `turma`(
     `id_turma` int AUTO_INCREMENT PRIMARY key not null,
     `add_turma` VARCHAR(30) not null,
     `data_inicio` date not null,
-    `data_termino` date not null,
-
-    `id_modulo` int not null,
-    `id_estudante` int not null,
-    `id_facilitador` int not null,
-    `id_curso` int not null,
-    foreign key (`id_curso`) references `curso` (`id_curso`),
-    foreign key (`id_facilitador`) references `facilitador` (`id_facilitador`),
-    foreign key (`id_estudante`) references `estudante` (`id_estudante`),
-    foreign key (`id_modulo`) references `modulo` (`id_modulo`)
+    `data_termino` date not null
 );
 
 create table `modulo`(
@@ -71,23 +46,13 @@ create table `modulo`(
     `modulo_2` VARCHAR(10) not null,
     `modulo_3` VARCHAR(10) not null,
     `modulo_4` VARCHAR(10) not null,
-    `modulo_5` VARCHAR(10) not null,
-    `id_curso` int not null,
-    `id_horario` int not null,
-    foreign key (`id_curso`) references `curso` (`id_curso`),
-    foreign key (`id_horario`) references `horario` (`Id_horario`)
+    `modulo_5` VARCHAR(10) not null
 );
 
 create table `curso`(
     `id_curso` int AUTO_INCREMENT PRIMARY key not null,
     `nome_curso` VARCHAR(15) not null,
-    `valor_curso` double not null,
-    `id_estudante` int not null,
-    `id_facilitador` int not null,
-    `id_modulo` int not null,
-    foreign key (`id_modulo`) references `modulo` (`id_modulo`),
-    foreign key (`id_facilitador`) references `facilitador` (`id_facilitador`),
-    foreign key (`id_estudante`) references `estudante` (`id_estudante`)
+    `valor_curso` double not null
 );
 
 create table `financeiro` (
@@ -98,38 +63,23 @@ create table `financeiro` (
     `dias_atraso` int not null,
     `data_pagamento` date not null,
     `valor_parcela` double not null,
-    `qnt_parcela` int not null,
-    `id_estudante` int not null,
-    `id_funcionario` int not null,
-    foreign key (`id_estudante`) references `estudante` (`id_estudante`),
-    foreign key (`id_funcionario`) references `funcionario` (`id_estudante`)
+    `qnt_parcela` int not null
 );
 
 create table `nota`(
     `id_nota` int AUTO_INCREMENT PRIMARY key not null,
     `nota` decimal not null,
-    `conceito` VARCHAR(20) not null,
-    `id_estudante`int not null,
-    `id_facilitador`int not null,
-    foreign key (`id_estudante`) references `estudante` (`id_estudante`),
-    foreign key (`id_facilitador`) references `facilitador` (`id_facilitador`),
+    `conceito` VARCHAR(20) not null
 );
 
 create table `funcionario`(
     `id_funcionario` int AUTO_INCREMENT PRIMARY key not null,
-    `nome_funcionario` VARCHAR(100) not null,
-    `id_cargo` int not null,
-    `id_cadastro` int not null,
-    `id_instituicao` int not null,
-    foreign key (`id_instituicao`) references `instituicao` (`id_instituicao`),
-    foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`)
+    `nome_funcionario` VARCHAR(100) not null
 );
 
 create table `cargo`(
     `id_cargo` int AUTO_INCREMENT PRIMARY key not null,
-    `nome_cargo` VARCHAR (100) not null,
-    `id_funcionario` int not null,
-    foreign key (`id_funcionario`) references `funcionario` (`id_estudante`)
+    `nome_cargo` VARCHAR (100) not null
 );
 
 create table `horario`(
