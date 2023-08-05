@@ -110,3 +110,9 @@ insert into cadastro(RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email
 (89898993, 08888888888, 'Rua da Esperança', 222, 'Recife', 50789012, 'Boa Viagem', 'PE', 'hugo.rocha@gmail.com', 988770066, 'Solteiro'),
 (90909097, 06789098765, 'Alameda dos Girassóis', 333, 'Manaus', 69045678, 'Parque das Flores', 'AM', 'natalia.gomes@hotmail.com', 922229900, 'Casado'),
 (23232329, 09999999999, 'Travessa das Acácias', 444, 'São Paulo', 04560789, 'Itaim Bibi', 'SP', 'gustavo.souza@yahoo.com', 988776633, 'Solteiro');
+
+insert into cargo (nome_cargo) values
+('Facilitador Tech'),
+('Facilitador Soft'),
+('Analista de Engajamento'),
+('Monitor');
