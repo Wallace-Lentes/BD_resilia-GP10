@@ -17,7 +17,7 @@ CREATE TABLE `Cadastro` (
 );
 
 create table `facilitador`(
-    `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null;
+    `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null,
     `nome_facilitador` VARCHAR(100) not null,
     `disciplina_facilitador` VARCHAR(50) not null,
     `sexo` VARCHAR(1) not null,
