@@ -4,7 +4,7 @@ use `resilia`;
 CREATE TABLE `Cadastro` (
     `id_cadastro` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     `RG` int not null,
-    `CPF` int not null,
+    `CPF` varchar(11) not null,
     `logradouro` VARCHAR(100) NOT NULL,
     `numero` INT NOT NULL,
     `cidade` VARCHAR(50) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE `Cadastro` (
     `UF` VARCHAR(2) NOT NULL,
     `email` VARCHAR(100) NOT NULL,
     `telefone` int not null,
-    `estado_civil` int not null
+    `estado_civil` varchar(20) not null
 );
 -- CRIA UMA TABELA DE FACILITADOR 
 create table `facilitador`(
