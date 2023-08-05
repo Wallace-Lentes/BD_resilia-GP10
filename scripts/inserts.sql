@@ -1,5 +1,6 @@
-insert into cadastro(RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email, telefone, estado_civil) values
-
+-- INSERÇÃO DE DADOS NA TABELA CADASTRO
+insert into cadastro(RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email, telefone, estado_civil) 
+values
 (97396542, 08895826412, 'Rua das Carnelitas', 295, 'Curitiba', 80215000, 'Hauer', 'PR', 'julio.almeida@gmail.com', 999538398, 'Casado'),
 (89452231, 04452133695, 'Avenida das Flores', 123, 'São Paulo', 04567890, 'Jardim Paulista', 'SP', 'maria.silva@hotmail.com', 988775566, 'Solteiro'),
 (75694328, 10087523098, 'Rua dos Pinheiros', 789, 'Porto Alegre', 90876000, 'Boa Vista', 'RS', 'joao.santos@yahoo.com', 911223344, 'Casado'),
@@ -111,8 +112,22 @@ insert into cadastro(RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email
 (90909097, 06789098765, 'Alameda dos Girassóis', 333, 'Manaus', 69045678, 'Parque das Flores', 'AM', 'natalia.gomes@hotmail.com', 922229900, 'Casado'),
 (23232329, 09999999999, 'Travessa das Acácias', 444, 'São Paulo', 04560789, 'Itaim Bibi', 'SP', 'gustavo.souza@yahoo.com', 988776633, 'Solteiro');
 
+-- INSERÇÃO DE CARGOS NA TABELA CARGO
 insert into cargo (nome_cargo) values
 ('Facilitador Tech'),
 ('Facilitador Soft'),
 ('Analista de Engajamento'),
 ('Monitor');
+
+-- INSERÇÃO DE HORARIOS NA TABELA HORARIO
+insert into horario (`data`, periodo, hora_inicio, hora_termino) values
+('2023-06-01', 'Manhã', '09:00:00', '12:00:00'),
+('2023-07-01', 'Tarde', '13:00:00', '16:00:00'),
+('2023-08-01', 'Manhã', '09:00:00', '12:00:00'),
+('2023-09-01', 'Tarde', '13:00:00', '16:00:00'),
+('2023-10-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-01-01', 'Tarde', '13:00:00', '16:00:00'),
+('2024-02-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-03-01', 'Tarde', '13:00:00', '16:00:00'),
+('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
