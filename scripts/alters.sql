@@ -1,5 +1,7 @@
 use `resilia`;
 
+-- ALTERA AS TEBELAS INSERINDO CHAVE ESTRANGEIRA
+
 alter table `facilitador` add `id_cargo` int not null, add foreign key (`id_cargo`) references `cargo` (`id_cargo`);
 
 alter table `facilitador` add `id_cadastro` int not null, add foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`);
