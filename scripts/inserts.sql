@@ -1,9 +1,9 @@
 -- INSERÇÃO DE DADOS NA TABELA CADASTRO
-insert into cadastro(RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email, telefone, estado_civil) 
+insert into cadastro(Nome, Sobrenome, RG, CPF, logradouro, numero, cidade, CEP, bairro, UF, email, telefone, estado_civil, sexo, data_nasc) 
 values
-(97396542, 08895826412, 'Rua das Carnelitas', 295, 'Curitiba', 80215000, 'Hauer', 'PR', 'julio.almeida@gmail.com', 999538398, 'Casado'),
-(89452231, 04452133695, 'Avenida das Flores', 123, 'São Paulo', 04567890, 'Jardim Paulista', 'SP', 'maria.silva@hotmail.com', 988775566, 'Solteiro'),
-(75694328, 10087523098, 'Rua dos Pinheiros', 789, 'Porto Alegre', 90876000, 'Boa Vista', 'RS', 'joao.santos@yahoo.com', 911223344, 'Casado'),
+('Julio','Almeida',97396542, 08895826412, 'Rua das Carnelitas', 295, 'Curitiba', 80215000, 'Hauer', 'PR', 'julio.almeida@gmail.com', 999538398, 'Casado', 'M', '1977-01-03'),
+('Maria','Silva',89452231, 04452133695, 'Avenida das Flores', 123, 'São Paulo', 04567890, 'Jardim Paulista', 'SP', 'maria.silva@hotmail.com', 988775566, 'Solteiro'),
+('João','Santos,'75694328, 10087523098, 'Rua dos Pinheiros', 789, 'Porto Alegre', 90876000, 'Boa Vista', 'RS', 'joao.santos@yahoo.com', 911223344, 'Casado'),
 (43567892, 03584672358, 'Avenida Central', 456, 'Belo Horizonte', 30678900, 'Centro', 'MG', 'ana.oliveira@gmail.com', 977664433, 'Divorciado'),
 (98765432, 04209746852, 'Rua da Esperança', 987, 'Fortaleza', 60874123, 'Centro', 'CE', 'pedro.souza@hotmail.com', 988776655, 'Casado'),
 (22334567, 07862340987, 'Alameda dos Coqueiros', 111, 'Recife', 50765432, 'Boa Viagem', 'PE', 'carla.martins@yahoo.com', 988776622, 'Casado'),
@@ -131,3 +131,29 @@ insert into horario (`data`, periodo, hora_inicio, hora_termino) values
 ('2024-03-01', 'Tarde', '13:00:00', '16:00:00'),
 ('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
 ('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
+
+insert into facilitador (disciplina_facilitador) values 
+('Javascript'),
+('Node'),
+('SQL'),
+('HTML/CSS'),
+('React'),
+('Rest API'),
+('Metodologias Ageis'),
+('Python'),
+('Bancos relacionais e nao relacionais'),
+('Pandas'),
+('Visualizacao de dados com Python: Plotly e Seaborn'),
+('Introducao ao Tableau'),
+('Java'),
+('Comunicacao assertiva'),
+('Aprender a aprender'),
+('Adaptabilidade'),
+('Gestao de Tempo'),
+('Lideranca'),
+('Resiliencia'),
+('Trabalho em equipe');
+
+
+
+
