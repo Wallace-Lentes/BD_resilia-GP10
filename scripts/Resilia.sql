@@ -40,11 +40,7 @@ create table `turma`(
 -- CRIA UMA TABELA DE MODULO
 create table `modulo`(
     `id_modulo` int AUTO_INCREMENT PRIMARY key not null,
-    `modulo_1` VARCHAR(10) not null,
-    `modulo_2` VARCHAR(10) not null,
-    `modulo_3` VARCHAR(10) not null,
-    `modulo_4` VARCHAR(10) not null,
-    `modulo_5` VARCHAR(10) not null
+    `nome` varchar(30)
 );
 -- CRIA UMA TABELA DE CURSO
 create table `curso`(
