@@ -3,6 +3,8 @@ use `resilia`;
 -- CRIA UMA TABELA DE CADASTRO PARA RECEBER DADOS DE ENDEREÇO.
 CREATE TABLE `Cadastro` (
     `id_cadastro` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    `Nome` varchar(200) NOT NULL,
+    `Sobrenome` varchar(200) NOT NULL,  
     `RG` int not null,
     `CPF` varchar(11) not null,
     `logradouro` VARCHAR(100) NOT NULL,
@@ -18,7 +20,6 @@ CREATE TABLE `Cadastro` (
 -- CRIA UMA TABELA DE FACILITADOR 
 create table `facilitador`(
     `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null,
-    `nome_facilitador` VARCHAR(100) not null,
     `disciplina_facilitador` VARCHAR(50) not null,
     `sexo` VARCHAR(1) not null,
     `data_nasc` date not null
@@ -26,7 +27,6 @@ create table `facilitador`(
 -- CRIA UMA TABELA DE ESTUDANTE 
 create table `estudante`(
     `id_estudante` int AUTO_INCREMENT PRIMARY key not null,
-    `nome` VARCHAR(100) not null,
     `sexo` VARCHAR(1) not null,
     `data_nasc` date not null,
     `nome_mae` VARCHAR(100) not null,
@@ -73,8 +73,7 @@ create table `nota`(
 );
 -- CRIA UMA TABELA DE FUNCIONARIO
 create table `funcionario`(
-    `id_funcionario` int AUTO_INCREMENT PRIMARY key not null,
-    `nome_funcionario` VARCHAR(100) not null
+    `id_funcionario` int AUTO_INCREMENT PRIMARY key not null
 );
 -- CRIA UMA TABELA DE CARGO
 create table `cargo`(
