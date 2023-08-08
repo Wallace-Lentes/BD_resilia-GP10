@@ -154,6 +154,13 @@ insert into facilitador (disciplina_facilitador) values
 ('Resiliencia'),
 ('Trabalho em equipe');
 
+insert into turma (add_turma, data_inicio, data_termino) values 
+('Turma_1','2020-01-30','2020-07-30'),
+('Turma_2','2020-08-30','2021-03-05'),
+('Turma_3','2020-01-25','2020-07-22'),
+('Turma_4','2021-04-01','2020-10-27'),
+('Turma_5','2021-06-28','2020-12-23');
+
 
 
 
