@@ -53,11 +53,11 @@ create table `financeiro` (
     `id_financeiro` int AUTO_INCREMENT PRIMARY key not null,
     `data_vencimento` date not null,
     `forma_pagamento` VARCHAR(30) not null,
-    `pag_em_debito` double not null,
+    -- `pag_em_debito` double not null,
     `dias_atraso` int not null,
     `data_pagamento` date not null,
     `valor_parcela` double not null,
-    `qnt_parcela` int not null
+    `num_da_parcela` int not null
 );
 -- CRIA UMA TABELA DE NOTA
 create table `nota`(
