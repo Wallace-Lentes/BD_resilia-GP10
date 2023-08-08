@@ -7,6 +7,8 @@ CREATE TABLE `Cadastro` (
     `Sobrenome` varchar(200) NOT NULL,  
     `RG` int not null,
     `CPF` varchar(11) not null,
+    `sexo` VARCHAR(1) not null,
+    `data_nasc` date not null,
     `logradouro` VARCHAR(100) NOT NULL,
     `numero` INT NOT NULL,
     `cidade` VARCHAR(50) NOT NULL,
@@ -21,14 +23,10 @@ CREATE TABLE `Cadastro` (
 create table `facilitador`(
     `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null,
     `disciplina_facilitador` VARCHAR(50) not null,
-    `sexo` VARCHAR(1) not null,
-    `data_nasc` date not null
 );
 -- CRIA UMA TABELA DE ESTUDANTE 
 create table `estudante`(
     `id_estudante` int AUTO_INCREMENT PRIMARY key not null,
-    `sexo` VARCHAR(1) not null,
-    `data_nasc` date not null,
     `nome_mae` VARCHAR(100) not null,
     `nome_pai` VARCHAR(100) null
 );
