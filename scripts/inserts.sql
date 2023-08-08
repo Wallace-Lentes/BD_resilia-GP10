@@ -169,4 +169,14 @@ insert into modulo (nome) values
 ('Modulo_4'),
 ('Modulo_5');
 
+insert into curso (nome_curso, valor_curso) values 
+('WebDev Full Stack Javascript', 16.000),
+('Data Analytics', 16.000),
+('Analise de Sistemas', 16.000),
+('WebDev Full Stack Java', 16.000);
+
+
+
+
+
 
