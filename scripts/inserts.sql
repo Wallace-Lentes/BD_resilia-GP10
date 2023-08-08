@@ -161,6 +161,12 @@ insert into turma (add_turma, data_inicio, data_termino) values
 ('Turma_4','2021-04-01','2020-10-27'),
 ('Turma_5','2021-06-28','2020-12-23');
 
-
+insert into modulo (nome) values
+('Modulo_0'),
+('Modulo_1'),
+('Modulo_2'),
+('Modulo_3'),
+('Modulo_4'),
+('Modulo_5');
 
 
