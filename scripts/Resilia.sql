@@ -45,7 +45,7 @@ create table `modulo`(
 -- CRIA UMA TABELA DE CURSO
 create table `curso`(
     `id_curso` int AUTO_INCREMENT PRIMARY key not null,
-    `nome_curso` VARCHAR(15) not null,
+    `nome_curso` VARCHAR(100) not null,
     `valor_curso` double not null
 );
 -- CRIA UMA TABELA DE FINANCEIRO
