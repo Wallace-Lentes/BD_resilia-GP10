@@ -22,7 +22,7 @@ CREATE TABLE `Cadastro` (
 -- CRIA UMA TABELA DE FACILITADOR 
 create table `materia`(
     `id_materia` int AUTO_INCREMENT PRIMARY KEY not null,
-    `nome_disciplina` VARCHAR(50) not null,
+    `nome_disciplina` VARCHAR(50) not null
 );
 -- CRIA UMA TABELA DE ESTUDANTE 
 create table `estudante`(
