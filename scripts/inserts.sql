@@ -12,7 +12,7 @@ values
 ('Lucas', 'Pereira', 78895762, 08273849501, 'Avenida dos Ipês', 789, 'Brasília', 70012345, 'Asa Sul', 'DF', 'lucas.pereira@yahoo.com', 988776611, 'Solteiro', 'M', '1998-02-24'),
 ('Ana', 'Oliveira', 34567890, 09123456789, 'Rua das Rosas', 101, 'Belo Horizonte', 30123456, 'Lourdes', 'MG', 'ricardo.medeiros@hotmail.com', 988774422, 'Casado', 'M', '1979-07-20'),
 ('Ana', 'Silveira', 12345678, 09123456789, 'Avenida Central', 765, 'São Paulo', 04560789, 'Itaim Bibi', 'SP', 'ana.silveira@hotmail.com', 988774455, 'Solteiro', 'F', '1990-07-18'),
-('Andrea', 'Santos', 98762345, 08123456789, 'Avenida das Palmeiras', 99, 'Fortaleza', 60012345, 'Meireles', 'CE', 'andrea.santos@yahoo.com', 988773344, 'Solteiro', 'F', '1995-12-01')
+('Andrea', 'Santos', 98762345, 08123456789, 'Avenida das Palmeiras', 99, 'Fortaleza', 60012345, 'Meireles', 'CE', 'andrea.santos@yahoo.com', 988773344, 'Solteiro', 'F', '1995-12-01'),
 ('Bruno', 'Menezes', 90347820, 07439201234, 'Rua dos Girassóis', 150, 'Porto Alegre', 90870123, 'Jardim Europa', 'RS', 'bruno.menezes@gmail.com', 988776611, 'Casado', 'M', '1981-09-05'),
 ('Camila', 'Fonseca', 45678923, 08098765234, 'Avenida do Sol', 1432, 'Porto Alegre', 90870123, 'Jardim Botânico', 'RS', 'camila.fonseca@gmail.com', 988778855, 'Casado', 'F', '1988-02-03'),
 ('Eduardo', 'Rodrigues', 87904567, 08888888888, 'Alameda das Mangueiras', 432, 'Recife', 50789012, 'Boa Viagem', 'PE', 'eduardo.rodrigues@gmail.com', 988770011, 'Casado', 'M', '1982-04-10'),
