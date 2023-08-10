@@ -147,7 +147,7 @@ insert into materia (nome_disciplina) values
 ('Trabalho em equipe');
 
 -- INSERÇÃO DE CARGOS NA TABELA FUNCIONARIO_CARGO
-insert into funcionario_cargo (cargo) values
+insert into funcionario_cargo (cargo, id_materia, id_cadastro) values
 ('Facilitador Tech'),
 ('Facilitador Soft'),
 ('Analista de Engajamento'),
@@ -166,7 +166,7 @@ insert into horario (`data`, periodo, hora_inicio, hora_termino) values
 ('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
 ('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
 
-insert into modulo (nome) values
+insert into modulo (nome, id_horario) values
 ('Modulo_0'),
 ('Modulo_1'),
 ('Modulo_2'),
@@ -174,13 +174,13 @@ insert into modulo (nome) values
 ('Modulo_4'),
 ('Modulo_5');
 
-insert into curso (nome_curso, valor_curso) values 
+insert into curso (nome_curso, valor_curso, id_modulo, id_funcionario) values 
 ('WebDev Full Stack Javascript', 16.000),
 ('Data Analytics', 16.000),
 ('Analise de Sistemas', 16.000),
 ('WebDev Full Stack Java', 16.000);
 
-insert into turma (add_turma, data_inicio, data_termino) values 
+insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo) values 
 ('Turma_1','2020-01-30','2020-07-30'),
 ('Turma_2','2020-08-30','2021-03-05'),
 ('Turma_3','2020-01-25','2020-07-22'),
@@ -189,16 +189,16 @@ insert into turma (add_turma, data_inicio, data_termino) values
 
 
 
-insert into estudante
+insert into estudante (nome_mae, nome_pai, id_curso, id_cadastro, id_turma)
 
 
 
-insert into nota
+insert into nota (nota, data, conceito, id_estudante)
 
 
 
 
-insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_pagamento, valor_parcela, num_da_parcela) values 
+insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_pagamento, valor_parcela, num_da_parcela, id_estudante) values 
 ('2020-03-10', 'credito', 0, '2020-03-08', 444.44, 1),
 ('2020-05-15', 'debito', 1, '2020-05-12', 444.44, 2),
 ('2020-07-22', 'credito', 0, '2020-07-20', 444.44, 13),
