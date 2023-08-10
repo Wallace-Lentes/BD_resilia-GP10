@@ -124,27 +124,7 @@ values
 ('Natalia', 'Gomes', 90909097, 06789098765, 'Alameda dos Girassóis', 333, 'Manaus', 69045678, 'Parque das Flores', 'AM', 'natalia.gomes@hotmail.com', 922229900, 'Casado', 'F', '1997-08-08'),
 ('Gustavo', 'Souza', 23232329, 09999999999, 'Travessa das Acácias', 444, 'São Paulo', 04560789, 'Itaim Bibi', 'SP', 'gustavo.souza@yahoo.com', 988776633, 'Solteiro', 'M', '1991-09-09');
 
--- INSERÇÃO DE CARGOS NA TABELA CARGO
-insert into cargo (nome_cargo) values
-('Facilitador Tech'),
-('Facilitador Soft'),
-('Analista de Engajamento'),
-('Monitor');
-
--- INSERÇÃO DE HORARIOS NA TABELA HORARIO
-insert into horario (`data`, periodo, hora_inicio, hora_termino) values
-('2023-06-01', 'Manhã', '09:00:00', '12:00:00'),
-('2023-07-01', 'Tarde', '13:00:00', '16:00:00'),
-('2023-08-01', 'Manhã', '09:00:00', '12:00:00'),
-('2023-09-01', 'Tarde', '13:00:00', '16:00:00'),
-('2023-10-01', 'Manhã', '09:00:00', '12:00:00'),
-('2024-01-01', 'Tarde', '13:00:00', '16:00:00'),
-('2024-02-01', 'Manhã', '09:00:00', '12:00:00'),
-('2024-03-01', 'Tarde', '13:00:00', '16:00:00'),
-('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
-('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
-
-insert into facilitador (disciplina_facilitador) values 
+insert into materia (nome_disciplina) values 
 ('Javascript'),
 ('Node'),
 ('SQL'),
@@ -166,12 +146,25 @@ insert into facilitador (disciplina_facilitador) values
 ('Resiliencia'),
 ('Trabalho em equipe');
 
-insert into turma (add_turma, data_inicio, data_termino) values 
-('Turma_1','2020-01-30','2020-07-30'),
-('Turma_2','2020-08-30','2021-03-05'),
-('Turma_3','2020-01-25','2020-07-22'),
-('Turma_4','2021-04-01','2020-10-27'),
-('Turma_5','2021-06-28','2020-12-23');
+-- INSERÇÃO DE CARGOS NA TABELA FUNCIONARIO_CARGO
+insert into funcionario_cargo (cargo) values
+('Facilitador Tech'),
+('Facilitador Soft'),
+('Analista de Engajamento'),
+('Monitor');
+
+-- INSERÇÃO DE HORARIOS NA TABELA HORARIO
+insert into horario (`data`, periodo, hora_inicio, hora_termino) values
+('2023-06-01', 'Manhã', '09:00:00', '12:00:00'),
+('2023-07-01', 'Tarde', '13:00:00', '16:00:00'),
+('2023-08-01', 'Manhã', '09:00:00', '12:00:00'),
+('2023-09-01', 'Tarde', '13:00:00', '16:00:00'),
+('2023-10-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-01-01', 'Tarde', '13:00:00', '16:00:00'),
+('2024-02-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-03-01', 'Tarde', '13:00:00', '16:00:00'),
+('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
+('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
 
 insert into modulo (nome) values
 ('Modulo_0'),
@@ -186,6 +179,24 @@ insert into curso (nome_curso, valor_curso) values
 ('Data Analytics', 16.000),
 ('Analise de Sistemas', 16.000),
 ('WebDev Full Stack Java', 16.000);
+
+insert into turma (add_turma, data_inicio, data_termino) values 
+('Turma_1','2020-01-30','2020-07-30'),
+('Turma_2','2020-08-30','2021-03-05'),
+('Turma_3','2020-01-25','2020-07-22'),
+('Turma_4','2021-04-01','2020-10-27'),
+('Turma_5','2021-06-28','2020-12-23');
+
+
+
+insert into estudante
+
+
+
+insert into nota
+
+
+
 
 insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_pagamento, valor_parcela, num_da_parcela) values 
 ('2020-03-10', 'credito', 0, '2020-03-08', 444.44, 1),
@@ -240,4 +251,16 @@ insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_paga
 
 
 
+-- EXEMPLO PARA NOTAS
+insert into nota (valor, data, conceito, id_modulo, id_aluno) values
+(2.0, 2023-01-30, 'N/A', 1, 23)
+(2.0, 2023-01-30, 2, 23)
+(2.0, 2023-01-30, 3, 23)
+(2.0, 2023-01-30, 4, 23)
+(2.0, 2023-01-30, 5, 23)
 
+
+-- PROVAVEL PERGUNTA PARA ANALIZE DE APROVACAO
+
+insert into nota (data,conceito, id_aluno) values
+(2023-11-30, 'aprovado', 23)
