@@ -20,9 +20,9 @@ CREATE TABLE `Cadastro` (
     `estado_civil` varchar(20) not null
 );
 -- CRIA UMA TABELA DE FACILITADOR 
-create table `facilitador`(
-    `id_facilitador` int AUTO_INCREMENT PRIMARY KEY not null,
-    `disciplina_facilitador` VARCHAR(50) not null,
+create table `materia`(
+    `id_materia` int AUTO_INCREMENT PRIMARY KEY not null,
+    `nome_disciplina` VARCHAR(50) not null,
 );
 -- CRIA UMA TABELA DE ESTUDANTE 
 create table `estudante`(
@@ -53,7 +53,6 @@ create table `financeiro` (
     `id_financeiro` int AUTO_INCREMENT PRIMARY key not null,
     `data_vencimento` date not null,
     `forma_pagamento` VARCHAR(30) not null,
-    -- `pag_em_debito` double not null,
     `dias_atraso` int not null,
     `data_pagamento` date not null,
     `valor_parcela` double not null,
@@ -62,18 +61,16 @@ create table `financeiro` (
 -- CRIA UMA TABELA DE NOTA
 create table `nota`(
     `id_nota` int AUTO_INCREMENT PRIMARY key not null,
-    `nota` decimal not null,
-    `conceito` VARCHAR(20) not null
+    `nota` decimal null,
+    `data` date null,
+    `conceito` VARCHAR(20) null
 );
--- CRIA UMA TABELA DE FUNCIONARIO
-create table `funcionario`(
-    `id_funcionario` int AUTO_INCREMENT PRIMARY key not null
+-- CRIA UMA TABELA DE FUNCIONARIO E CARGO
+create table `funcionario_cargo`(
+    `id_funcionario` int AUTO_INCREMENT PRIMARY key not null,
+    `cargo` varchar(100) not null
 );
--- CRIA UMA TABELA DE CARGO
-create table `cargo`(
-    `id_cargo` int AUTO_INCREMENT PRIMARY key not null,
-    `nome_cargo` VARCHAR (100) not null
-);
+
 -- CRIA UMA TABELA DE HORARIO 
 create table `horario`(
     `id_horario` int AUTO_INCREMENT PRIMARY key not null,
