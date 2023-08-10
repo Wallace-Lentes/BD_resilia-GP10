@@ -38,7 +38,7 @@ alter table `nota` add `id_estudante` int not null, add foreign key (`id_estudan
 -- 5 modulo OK
 -- 6 curso OK
 -- 7 turma OKs
--- 8 estudante ?
--- 9 nota ?
+-- 8 estudante ok
+-- 9 nota ok
 -- 10 financeiro ok
 
