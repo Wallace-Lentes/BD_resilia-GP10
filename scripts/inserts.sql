@@ -124,6 +124,7 @@ values
 ('Natalia', 'Gomes', 90909097, 06789098765, 'Alameda dos Girassóis', 333, 'Manaus', 69045678, 'Parque das Flores', 'AM', 'natalia.gomes@hotmail.com', 922229900, 'Casado', 'F', '1997-08-08'),
 ('Gustavo', 'Souza', 23232329, 09999999999, 'Travessa das Acácias', 444, 'São Paulo', 04560789, 'Itaim Bibi', 'SP', 'gustavo.souza@yahoo.com', 988776633, 'Solteiro', 'M', '1991-09-09');
 
+-- INSERÇÃO DAS DISCIPLINAS NA TABELA MATERIA.
 insert into materia (nome_disciplina) values 
 ('Javascript'),
 ('Node'),
@@ -166,6 +167,7 @@ insert into horario (`data`, periodo, hora_inicio, hora_termino) values
 ('2024-04-01', 'Manhã', '09:00:00', '12:00:00'),
 ('2024-05-01', 'Tarde', '13:00:00', '16:00:00');
 
+-- INSERÇÃO DOS MODULOS NA TABELA MODULOS.
 insert into modulo (nome, id_horario) values
 ('Modulo_0'),
 ('Modulo_1'),
@@ -174,12 +176,14 @@ insert into modulo (nome, id_horario) values
 ('Modulo_4'),
 ('Modulo_5');
 
+-- INSERÇÃO DOS CURSOS NA TABLEA CURSO.
 insert into curso (nome_curso, valor_curso, id_modulo, id_funcionario) values 
 ('WebDev Full Stack Javascript', 16.000),
 ('Data Analytics', 16.000),
 ('Analise de Sistemas', 16.000),
 ('WebDev Full Stack Java', 16.000);
 
+-- INSERÇÃO DAS TURMAS NA TABELA TURMA.
 insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo) values 
 ('Turma_1','2020-01-30','2020-07-30'),
 ('Turma_2','2020-08-30','2021-03-05'),
@@ -187,7 +191,7 @@ insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo) va
 ('Turma_4','2021-04-01','2020-10-27'),
 ('Turma_5','2021-06-28','2020-12-23');
 
-
+-- INSERÇÃO DOS NOMES DE PAI E MÃE DOS ESTUDANTES COMPLETANDO O CADASTRO.
 INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALUES
 ('João Silva', 'Maria Silva'),
 ('Carlos Santos', 'Ana Santos'),
@@ -281,12 +285,12 @@ INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALU
 
 
 
-
-insert into nota (nota, data, conceito, id_estudante)
-
-
+-- INSERÇÃO DAS NOTAS DOS ALUNOS NO FIM DE CADA MODULO.
+insert into nota (nota, `data`, conceito, id_estudante)
 
 
+
+-- INSERÇÃO DE DADOS DOS PAGAMENTOS QUE ESTÃO EM DIA OU EM ATRASO.
 insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_pagamento, valor_parcela, num_da_parcela, id_estudante) values 
 ('2020-03-10', 'credito', 0, '2020-03-08', 444.44, 1),
 ('2020-05-15', 'debito', 1, '2020-05-12', 444.44, 2),
@@ -341,7 +345,7 @@ insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_paga
 
 
 -- EXEMPLO PARA NOTAS
-insert into nota (valor, data, conceito, id_modulo, id_aluno) values
+insert into nota (valor, `data`, conceito, id_modulo, id_aluno) values
 (2.0, 2023-01-30, 'N/A', 1, 23)
 (2.0, 2023-01-30, 2, 23)
 (2.0, 2023-01-30, 3, 23)
@@ -351,5 +355,5 @@ insert into nota (valor, data, conceito, id_modulo, id_aluno) values
 
 -- PROVAVEL PERGUNTA PARA ANALIZE DE APROVACAO
 
-insert into nota (data,conceito, id_aluno) values
+insert into nota (`data`,conceito, id_aluno) values
 (2023-11-30, 'aprovado', 23)
