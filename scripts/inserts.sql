@@ -252,12 +252,17 @@ insert into curso (nome_curso, valor_curso, id_modulo, id_funcionario) values
 ('WebDev Full Stack Java', 16.000,1,8);
 
 -- INSERÇÃO DAS TURMAS NA TABELA TURMA.
-insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo) values 
-('Turma_1','2020-01-30','2020-07-30',4,5),
-('Turma_2','2020-08-30','2021-03-05',2,6),
-('Turma_3','2020-01-25','2020-07-22',1,2),
-('Turma_4','2021-04-01','2020-10-27',3,1),
-('Turma_5','2021-06-28','2020-12-23',1,3);
+insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo, id_funcionario) values 
+('Turma_1','2020-01-30','2020-07-30',7,5,7),
+('Turma_1','2020-01-30','2020-07-30',7,5,8),
+('Turma_2','2020-08-30','2021-03-05',1,6,1),
+('Turma_2','2020-08-30','2021-03-05',1,6,2),
+('Turma_3','2020-01-25','2020-07-22',1,2,1),
+('Turma_3','2020-01-25','2020-07-22',1,2,2),
+('Turma_4','2021-04-01','2020-10-27',5,1,5),
+('Turma_4','2021-04-01','2020-10-27',5,1,6),
+('Turma_5','2021-06-28','2020-12-23',3,3,3);
+('Turma_5','2021-06-28','2020-12-23',3,3,4);
 
 -- INSERÇÃO DOS NOMES DE PAI E MÃE DOS ESTUDANTES COMPLETANDO O CADASTRO.
 INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALUES
