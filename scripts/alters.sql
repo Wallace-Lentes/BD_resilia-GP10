@@ -12,6 +12,7 @@ alter table `estudante` add `id_turma` int not null, add foreign key (`id_turma`
 -- INSERINDO CHAVE ESTRANGEIRA NA TABELA TURMA
 alter table `turma` add `id_curso` int not null, add foreign key (`id_curso`) references `curso` (`id_curso`);
 alter table `turma` add `id_modulo` int not null, add foreign key (`id_modulo`) references `modulo` (`id_modulo`);
+alter table `turma` add `id_funcionario` int not null, add foreign key (`id_funcionario`) references `funcionario_cargo` (`id_funcionario`);
 
 -- INSERINDO CHAVE ESTRANGEIRA NA TABELA MODULO
 alter table `modulo` add `id_horario` int not null, add foreign key (`id_horario`) references `horario` (`Id_horario`);
