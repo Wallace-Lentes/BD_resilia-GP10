@@ -145,20 +145,78 @@ insert into materia (nome_disciplina) values
 ('Gestao de Tempo'),
 ('Lideranca'),
 ('Resiliencia'),
-('Trabalho em equipe');
+('Trabalho em equipe'),
+('Analista'),
+('Monitoria');
 
 -- INSERÇÃO DE CARGOS NA TABELA FUNCIONARIO_CARGO FALTA COLOCAR ID MATERIA 
 insert into funcionario_cargo (cargo, id_materia, id_cadastro) values
-('Facilitador Tech',,1),
-('Facilitador Soft',,2),
-('Facilitador Tech',,3),
-('Facilitador Soft',,4),
-('Facilitador Tech',,5),
-('Facilitador Soft',,6),
-('Facilitador Tech',,7),
-('Facilitador Soft',,8),
-('Analista de Engajamento',,9),
-('Monitor',,10);
+('Facilitador Tech',1,1),
+('Facilitador Tech',2,1),
+('Facilitador Tech',3,1),
+('Facilitador Tech',4,1),
+('Facilitador Tech',5,1),
+('Facilitador Tech',6,1),
+('Facilitador Tech',9,1),
+
+('Facilitador Soft',7,2),
+('Facilitador Soft',14,2),
+('Facilitador Soft',15,2),
+('Facilitador Soft',16,2),
+('Facilitador Soft',17,2),
+('Facilitador Soft',18,2),
+('Facilitador Soft',19,2),
+('Facilitador Soft',20,2),
+
+('Facilitador Tech',3,3),
+('Facilitador Tech',6,3),
+('Facilitador Tech',8,3),
+('Facilitador Tech',9,3),
+('Facilitador Tech',10,3),
+('Facilitador Tech',11,3),
+('Facilitador Tech',12,3),
+
+('Facilitador Soft',7,4),
+('Facilitador Soft',14,4),
+('Facilitador Soft',15,4),
+('Facilitador Soft',16,4),
+('Facilitador Soft',17,4),
+('Facilitador Soft',18,4),
+('Facilitador Soft',19,4),
+('Facilitador Soft',20,4),
+
+('Facilitador Tech',1,5),
+('Facilitador Tech',2,5),
+('Facilitador Tech',3,5),
+('Facilitador Tech',4,5),
+('Facilitador Tech',5,5),
+('Facilitador Tech',6,5),
+('Facilitador Tech',9,5),
+
+('Facilitador Soft',7,6),
+('Facilitador Soft',14,6),
+('Facilitador Soft',15,6),
+('Facilitador Soft',16,6),
+('Facilitador Soft',17,6),
+('Facilitador Soft',18,6),
+('Facilitador Soft',19,6),
+('Facilitador Soft',20,6),
+
+('Facilitador Tech',4,7),
+('Facilitador Tech',5,7),
+('Facilitador Tech',6,7),
+('Facilitador Tech',13,7),
+
+('Facilitador Soft',7,8),
+('Facilitador Soft',14,8),
+('Facilitador Soft',15,8),
+('Facilitador Soft',16,8),
+('Facilitador Soft',17,8),
+('Facilitador Soft',18,8),
+('Facilitador Soft',19,8),
+('Facilitador Soft',20,8),
+('Analista de Engajamento',21,9),
+('Monitor',22,10);
 
 -- INSERÇÃO DE HORARIOS NA TABELA HORARIO
 insert into horario (`data`, periodo, hora_inicio, hora_termino) values
@@ -184,18 +242,22 @@ insert into modulo (nome, id_horario) values
 
 -- INSERÇÃO DOS CURSOS NA TABLEA CURSO. falta colocar id funcionario 
 insert into curso (nome_curso, valor_curso, id_modulo, id_funcionario) values 
-('WebDev Full Stack Javascript', 16.000,3,),
-('Data Analytics', 16.000,5,),
-('Analise de Sistemas', 16.000,4,),
-('WebDev Full Stack Java', 16.000,1,);
+('WebDev Full Stack Javascript', 16.000,3,1),
+('WebDev Full Stack Javascript', 16.000,3,2),
+('Data Analytics', 16.000,5,3),
+('Data Analytics', 16.000,5,4),
+('Analise de Sistemas', 16.000,4,5),
+('Analise de Sistemas', 16.000,4,6),
+('WebDev Full Stack Java', 16.000,1,7),
+('WebDev Full Stack Java', 16.000,1,8);
 
 -- INSERÇÃO DAS TURMAS NA TABELA TURMA.
 insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo) values 
 ('Turma_1','2020-01-30','2020-07-30',4,5),
-('Turma_2','2020-08-30','2021-03-05',2,7),
-('Turma_3','2020-01-25','2020-07-22',1,9),
+('Turma_2','2020-08-30','2021-03-05',2,6),
+('Turma_3','2020-01-25','2020-07-22',1,2),
 ('Turma_4','2021-04-01','2020-10-27',3,1),
-('Turma_5','2021-06-28','2020-12-23',1,10);
+('Turma_5','2021-06-28','2020-12-23',1,3);
 
 -- INSERÇÃO DOS NOMES DE PAI E MÃE DOS ESTUDANTES COMPLETANDO O CADASTRO.
 INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALUES
@@ -203,7 +265,7 @@ INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALU
 ('Carlos Santos', 'Ana Santos',1,12,1),
 ('Rafael Oliveira', 'Patrícia Oliveira',4,13,1),
 ('Fernando Souza', 'Camila Souza',3,14,1),
-('André Almeida', 'Juliana Almeida'4,15,1),
+('André Almeida', 'Juliana Almeida',4,15,1),
 ('Paulo Rodrigues', 'Sandra Rodrigues',2,16,1),
 ('Roberto Pereira', 'Lúcia Pereira',3,17,1),
 ('Antônio Costa', 'Isabel Costa',1,18,1),
@@ -233,7 +295,7 @@ INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALU
 ('Wagner Ribeiro', 'Débora Ribeiro',3,42,4),
 ('Ricardo Gomes', 'Larissa Gomes',2,43,5),
 ('Sérgio Andrade', 'Carmen Andrade',4,44,5),
-('Guilherme Santos', 'Patrícia Santos',22,45,5),
+('Guilherme Santos', 'Patrícia Santos',2,45,5),
 ('Rafael Lima', 'Marta Lima',1,46,5),
 ('Paulo Castro', 'Isabela Castro',1,47,5),
 ('Diego Almeida', 'Marina Almeida',3,48,5),
@@ -292,7 +354,7 @@ INSERT INTO estudante (nome_pai, nome_mae, id_curso, id_cadastro, id_turma) VALU
 
 
 -- INSERÇÃO DAS NOTAS DOS ALUNOS NO FIM DE CADA MODULO.
-insert into nota (nota, `data`, conceito, id_estudante)
+insert into nota (nota, `data`, conceito, id_estudante) values
 (7.5, '2020-01-30', 'aprovado',20),
 (6.2, '2020-03-15', 'reprovado',21),
 (8.9, '2020-06-28', 'aprovado',22),
@@ -367,25 +429,25 @@ insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_paga
 ('2023-11-20', 'debito', 1, '2023-11-18', 444.44, 6,87),
 ('2023-12-31', 'credito', 0, '2023-12-29', 444.44, 29,88),
 ('2024-02-08', 'debito', 1, '2024-02-06', 444.44, 9,89),
-('2024-03-24', 'credito', 0, '2024-03-22', 444.44, 25,90),
-('2024-05-12', 'debito', 1, '2024-05-10', 444.44, 12,91),
-('2024-06-28', 'credito', 0, '2024-06-26', 444.44, 14,91),
-('2024-08-15', 'debito', 1, '2024-08-13', 444.44, 34,92),
-('2024-10-02', 'credito', 0, '2024-09-30', 444.44, 35,93),
-('2024-11-19', 'boleto', 1, '2024-11-17', 444.44, 23,94),
-('2024-12-30', 'credito', 0, '2024-12-28', 444.44, 22,95),
-('2025-02-07', 'debito', 1, '2025-02-05', 444.44, 30,96),
-('2025-03-25', 'credito', 0, '2025-03-23', 444.44, 11,97),
-('2025-05-10', 'debito', 1, '2025-05-08', 444.44, 6,98),
-('2025-06-27', 'credito', 0, '2025-06-25', 444.44, 2,99),
-('2025-08-14', 'debito', 1, '2025-08-12', 444.44, 8,100),
-('2025-09-30', 'credito', 0, '2025-09-28', 444.44, 15,101),
-('2025-11-18', 'debito', 1, '2025-11-16', 444.44, 19,102),
-('2025-12-29', 'credito', 0, '2025-12-27', 444.44, 27,103),
-('2026-02-06', 'debito', 1, '2026-02-04', 444.44, 11,104),
-('2026-03-24', 'boleto', 0, '2026-03-22', 444.44, 9,105),
-('2026-05-09', 'debito', 1, '2026-05-07', 444.44, 6,106),
-('2026-06-26', 'credito', 0, '2026-06-24', 444.44, 5,107);
+('2024-03-24', 'credito', 0, '2024-03-22', 444.44, 25,10),
+('2024-05-12', 'debito', 1, '2024-05-10', 444.44, 12,11),
+('2024-06-28', 'credito', 0, '2024-06-26', 444.44, 14,12),
+('2024-08-15', 'debito', 1, '2024-08-13', 444.44, 34,13),
+('2024-10-02', 'credito', 0, '2024-09-30', 444.44, 35,14),
+('2024-11-19', 'boleto', 1, '2024-11-17', 444.44, 23,15),
+('2024-12-30', 'credito', 0, '2024-12-28', 444.44, 22,16),
+('2025-02-07', 'debito', 1, '2025-02-05', 444.44, 30,17),
+('2025-03-25', 'credito', 0, '2025-03-23', 444.44, 11,18),
+('2025-05-10', 'debito', 1, '2025-05-08', 444.44, 6,19),
+('2025-06-27', 'credito', 0, '2025-06-25', 444.44, 2,20),
+('2025-08-14', 'debito', 1, '2025-08-12', 444.44, 8,21),
+('2025-09-30', 'credito', 0, '2025-09-28', 444.44, 15,22),
+('2025-11-18', 'debito', 1, '2025-11-16', 444.44, 19,23),
+('2025-12-29', 'credito', 0, '2025-12-27', 444.44, 27,24),
+('2026-02-06', 'debito', 1, '2026-02-04', 444.44, 11,25),
+('2026-03-24', 'boleto', 0, '2026-03-22', 444.44, 9,27),
+('2026-05-09', 'debito', 1, '2026-05-07', 444.44, 6,26),
+('2026-06-26', 'credito', 0, '2026-06-24', 444.44, 5,28);
 
 
 
