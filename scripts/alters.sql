@@ -5,12 +5,12 @@ alter table `funcionario_cargo` add `id_materia` int not null, add foreign key (
 alter table `funcionario_cargo` add `id_cadastro` int not null, add foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`);
 
 -- INSERINDO CHAVE ESTRANGEIRA NA TABELA ESTUDANTE
-alter table `estudante` add `id_curso` int not null, add foreign key (`id_curso`) references `curso` (`id_curso`);
+alter table `estudante` add `id_curso` int not null, add foreign key (`id_curso`) references `curso`(`id_curso`);
 alter table `estudante` add `id_cadastro` int not null, add foreign key (`id_cadastro`) references `cadastro` (`id_cadastro`);
+alter table `estudante` add `id_turma` int not null, add foreign key (`id_turma`) references `turma` (`id_turma`);
 
 -- INSERINDO CHAVE ESTRANGEIRA NA TABELA TURMA
 alter table `turma` add `id_curso` int not null, add foreign key (`id_curso`) references `curso` (`id_curso`);
-alter table `turma` add `id_estudante` int not null, add foreign key (`id_estudante`) references `estudante` (`id_estudante`);
 alter table `turma` add `id_modulo` int not null, add foreign key (`id_modulo`) references `modulo` (`id_modulo`);
 
 -- INSERINDO CHAVE ESTRANGEIRA NA TABELA MODULO
