@@ -39,13 +39,20 @@ CREATE VIEW ViewPorcentagemEvasao AS
     FROM
         estudante
     GROUP BY id_turma;
-
-    -- -- PROVAVEL PERGUNTA PARA ANALIZE DE APROVACAO
-
--- insert into nota (`data`,conceito, id_aluno) values
--- (2023-11-30, 'aprovado', 23)
-
--- Criar uma view que selecione a porcentagem de estudantes com status de aprovado agrupados por turma.  
+-- pergunta 4: selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
+CREATE VIEW ViweAprovados AS
+    SELECT 
+        COUNT(nota.id_estudante) AS total_alunos,
+        SUM(CASE
+            WHEN nota.conceito = 'aprovado' THEN 1
+            ELSE 0
+        END) AS total_aprovados,
+        (SUM(CASE
+            WHEN nota.conceito = 'aprovado' THEN 1
+            ELSE 0
+        END) / COUNT(nota.id_estudante)) * 100 AS porcentagem_aprovados
+    FROM
+        nota;
 
 
 
