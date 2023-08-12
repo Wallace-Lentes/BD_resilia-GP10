@@ -15,3 +15,23 @@ CREATE VIEW ViewPorcentagemEvasao AS
     FROM
         estudante
     GROUP BY id_turma;
+
+    -- pergunta 6: top 15 melhores notas alunos.
+
+    CREATE VIEW ViewTop15MelhoresNotas AS
+    SELECT 
+        estudante.id_estudante,
+        cadastro.Nome,
+        cadastro.sobrenome AS sobrenome,
+        curso.nome_curso,
+        nota.nota
+    FROM
+        estudante
+            JOIN
+        cadastro ON estudante.id_cadastro = cadastro.id_cadastro
+            JOIN
+        curso ON estudante.id_curso = curso.id_curso
+            JOIN
+        nota ON estudante.id_estudante = nota.id_estudante
+    ORDER BY nota.nota DESC
+    LIMIT 15;
