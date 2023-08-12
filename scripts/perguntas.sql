@@ -39,7 +39,9 @@ CREATE VIEW ViewPorcentagemEvasao AS
     FROM
         estudante
     GROUP BY id_turma;
--- pergunta 4: selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
+
+-- pergunta 4: selecione a porcentagem de estudantes com status de aprovado. 
+
 CREATE VIEW ViweAprovados AS
     SELECT 
         COUNT(nota.id_estudante) AS total_alunos,
