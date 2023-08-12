@@ -39,8 +39,19 @@ CREATE VIEW ViewPorcentagemEvasao AS
     FROM
         estudante
     GROUP BY id_turma;
+-- 4 selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
+SELECT 
+    nota.id_estudante,
+    SUM(CASE
+        WHEN nota.conceito = 'aprovado' THEN 1
+        ELSE 0
+    END) AS total_aprovados
+FROM
+nota
+GROUP BY id_estudante;
 
--- pergunta 4: selecione a porcentagem de estudantes com status de aprovado. 
+
+SELECT COUNT(*) as total_aprovados FROM nota WHERE conceito = 'aprovado';
 
 CREATE VIEW ViweAprovados AS
     SELECT 
@@ -55,25 +66,3 @@ CREATE VIEW ViweAprovados AS
         END) / COUNT(nota.id_estudante)) * 100 AS porcentagem_aprovados
     FROM
         nota;
-
--- Pergunta 5: obter informações sobre os alunos, seus cursos e suas notas.
-
-CREATE VIEW ViewInformacaoAlunosNotasTurmas AS
-    SELECT 
-        estudante.id_estudante,
-        cadastro.Nome,
-        cadastro.sobrenome AS sobrenome,
-        curso.nome_curso,
-        nota.nota
-    FROM
-        estudante 
-            JOIN
-        cadastro ON estudante.id_cadastro = cadastro.id_cadastro
-            JOIN
-        curso  ON estudante.id_curso = curso.id_curso
-            JOIN
-        nota  ON estudante.id_estudante = nota.id_estudante
-    ORDER BY curso.nome_curso , estudante.id_estudante;
-
-
-
