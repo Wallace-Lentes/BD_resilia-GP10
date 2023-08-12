@@ -34,11 +34,11 @@ nota
 GROUP BY id_estudante;
 
 
---  pergunta 7 Listar todos os estudantes em uma turma específica:
+--  pergunta 7 Listar todos os estudantes em uma turma específica.
 
 select estudante.* from estudante where id_turma = 3;
 
--- pergunta 8 Contar o número de estudantes em um determinado curso:
+-- pergunta 8 Contar o número de estudantes em um determinado curso.
 
     SELECT 
         COUNT(*) AS total_estudantes
@@ -46,3 +46,12 @@ select estudante.* from estudante where id_turma = 3;
         estudante
     WHERE
         id_curso = 3;
+
+-- pergunta 9 Calcular o valor total das parcelas pagas em um determinado período no financeiro.
+
+    SELECT 
+        SUM(valor_parcela) AS total_pago
+    FROM
+        financeiro
+    WHERE
+        data_pagamento BETWEEN '2020-03-08' AND '2022-11-30';
