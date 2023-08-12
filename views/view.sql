@@ -16,6 +16,24 @@ CREATE VIEW ViewPorcentagemEvasao AS
         estudante
     GROUP BY id_turma;
 
+    -- pergunta 5 -porcentage de aprovados por turma
+
+SELECT COUNT(*) as total_aprovados FROM nota WHERE conceito = 'aprovado';
+
+CREATE VIEW ViweAprovados AS
+    SELECT 
+        COUNT(nota.id_estudante) AS total_alunos,
+        SUM(CASE
+            WHEN nota.conceito = 'aprovado' THEN 1
+            ELSE 0
+        END) AS total_aprovados,
+        (SUM(CASE
+            WHEN nota.conceito = 'aprovado' THEN 1
+            ELSE 0
+        END) / COUNT(nota.id_estudante)) * 100 AS porcentagem_aprovados
+    FROM
+        nota;
+
     -- pergunta 6: top 15 melhores notas alunos.
 
     CREATE VIEW ViewTop15MelhoresNotas AS
