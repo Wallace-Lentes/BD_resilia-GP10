@@ -20,7 +20,7 @@ FROM
         LEFT JOIN
     cadastro ON funcionario_cargo.id_cadastro = cadastro.id_cadastro
 WHERE
-    total_turmas > 1
+    total_turmas > 1;
 
 -- pergunta 3: Criar uma view que selecione a porcentagem de estudantes com status de evasão agrupados por turma.
 
@@ -34,8 +34,18 @@ CREATE VIEW ViewPorcentagemEvasao AS
         COUNT(*) AS total_alunos,
         (COUNT(CASE
             WHEN status = 'inativo' THEN 1
-            ELSE NULL
+            ELSE NULL   
         END) / COUNT(*)) * 100 AS porcentagem_inativos
     FROM
         estudante
     GROUP BY id_turma;
+
+    -- -- PROVAVEL PERGUNTA PARA ANALIZE DE APROVACAO
+
+-- insert into nota (`data`,conceito, id_aluno) values
+-- (2023-11-30, 'aprovado', 23)
+
+-- Criar uma view que selecione a porcentagem de estudantes com status de aprovado agrupados por turma.  
+
+
+

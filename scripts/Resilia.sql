@@ -28,7 +28,8 @@ create table `materia`(
 create table `estudante`(
     `id_estudante` int AUTO_INCREMENT PRIMARY key not null,
     `nome_mae` VARCHAR(100) not null,
-    `nome_pai` VARCHAR(100) null
+    `nome_pai` VARCHAR(100) null,
+    `status` VARCHAR(30)
 );
 -- CRIA UMA TABELA DE TURMA
 create table `turma`(

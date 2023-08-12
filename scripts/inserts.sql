@@ -261,7 +261,7 @@ insert into turma (add_turma, data_inicio, data_termino, id_curso, id_modulo, id
 ('Turma_3','2020-01-25','2020-07-22',1,2,2),
 ('Turma_4','2021-04-01','2020-10-27',5,1,5),
 ('Turma_4','2021-04-01','2020-10-27',5,1,6),
-('Turma_5','2021-06-28','2020-12-23',3,3,3);
+('Turma_5','2021-06-28','2020-12-23',3,3,3),
 ('Turma_5','2021-06-28','2020-12-23',3,3,4);
 
 -- INSERÇÃO DOS NOMES DE PAI E MÃE DOS ESTUDANTES COMPLETANDO O CADASTRO.
@@ -458,7 +458,3 @@ insert into financeiro (data_vencimento, forma_pagamento, dias_atraso, data_paga
 
 
 
--- -- PROVAVEL PERGUNTA PARA ANALIZE DE APROVACAO
-
--- insert into nota (`data`,conceito, id_aluno) values
--- (2023-11-30, 'aprovado', 23)
