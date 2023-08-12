@@ -40,6 +40,9 @@ select estudante.* from estudante where id_turma = 3;
 
 -- pergunta 8 Contar o número de estudantes em um determinado curso:
 
-select count(*) as total_estudantes
-from estudante 
-where id_curso = 3;
+    SELECT 
+        COUNT(*) AS total_estudantes
+    FROM
+        estudante
+    WHERE
+        id_curso = 3;
