@@ -22,23 +22,6 @@ FROM
 WHERE
     total_turmas > 1;
 
--- pergunta 3: Criar uma view que selecione a porcentagem de estudantes com status de evasão agrupados por turma.
-
-CREATE VIEW ViewPorcentagemEvasao AS
-    SELECT 
-        id_turma,
-        COUNT(CASE
-            WHEN status = 'inativo' THEN 1
-            ELSE NULL
-        END) AS total_inativos,
-        COUNT(*) AS total_alunos,
-        (COUNT(CASE
-            WHEN status = 'inativo' THEN 1
-            ELSE NULL   
-        END) / COUNT(*)) * 100 AS porcentagem_inativos
-    FROM
-        estudante
-    GROUP BY id_turma;
 -- 4 selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
 SELECT 
     nota.id_estudante,
