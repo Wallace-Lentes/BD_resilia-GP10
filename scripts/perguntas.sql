@@ -37,3 +37,9 @@ GROUP BY id_estudante;
 --  pergunta 7 Listar todos os estudantes em uma turma específica:
 
 select estudante.* from estudante where id_turma = 3;
+
+-- pergunta 8 Contar o número de estudantes em um determinado curso:
+
+select count(*) as total_estudantes
+from estudante 
+where id_curso = 3;
