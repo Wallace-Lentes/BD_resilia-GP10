@@ -22,7 +22,7 @@ FROM
 WHERE
     total_turmas > 1;
 
--- 4 selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
+-- pergunta 4 selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
 SELECT 
     nota.id_estudante,
     SUM(CASE
@@ -34,18 +34,6 @@ nota
 GROUP BY id_estudante;
 
 
-SELECT COUNT(*) as total_aprovados FROM nota WHERE conceito = 'aprovado';
+--  pergunta 7 Listar todos os estudantes em uma turma específica:
 
-CREATE VIEW ViweAprovados AS
-    SELECT 
-        COUNT(nota.id_estudante) AS total_alunos,
-        SUM(CASE
-            WHEN nota.conceito = 'aprovado' THEN 1
-            ELSE 0
-        END) AS total_aprovados,
-        (SUM(CASE
-            WHEN nota.conceito = 'aprovado' THEN 1
-            ELSE 0
-        END) / COUNT(nota.id_estudante)) * 100 AS porcentagem_aprovados
-    FROM
-        nota;
+select estudante.* from estudante where id_turma = 3;
