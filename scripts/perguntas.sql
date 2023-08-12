@@ -56,5 +56,24 @@ CREATE VIEW ViweAprovados AS
     FROM
         nota;
 
+-- Pergunta 5: obter informações sobre os alunos, seus cursos e suas notas.
+
+CREATE VIEW ViewInformacaoAlunosNotasTurmas AS
+    SELECT 
+        estudante.id_estudante,
+        cadastro.Nome,
+        cadastro.sobrenome AS sobrenome,
+        curso.nome_curso,
+        nota.nota
+    FROM
+        estudante 
+            JOIN
+        cadastro ON estudante.id_cadastro = cadastro.id_cadastro
+            JOIN
+        curso  ON estudante.id_curso = curso.id_curso
+            JOIN
+        nota  ON estudante.id_estudante = nota.id_estudante
+    ORDER BY curso.nome_curso , estudante.id_estudante;
+
 
 
