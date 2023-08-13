@@ -53,8 +53,8 @@ CREATE VIEW ViweAprovados AS
         nota ON estudante.id_estudante = nota.id_estudante
     ORDER BY nota.nota DESC
     LIMIT 15;
-    
--- pergunta 10: Qual a porcetagem de alunos com pagamento em dia e atraso.
+
+-- pergunta 11: Qual a porcetagem de alunos com pagamento em dia e atraso.
 
     CREATE VIEW PorcentegemSituacaoDePagamento AS
     SELECT 
