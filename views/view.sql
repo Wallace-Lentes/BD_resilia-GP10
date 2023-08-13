@@ -53,3 +53,46 @@ CREATE VIEW ViweAprovados AS
         nota ON estudante.id_estudante = nota.id_estudante
     ORDER BY nota.nota DESC
     LIMIT 15;
+    
+-- pergunta 10: Qual a porcetagem de alunos com pagamento em dia e atraso.
+
+    CREATE VIEW PorcentegemSituacaoDePagamento AS
+    SELECT 
+        COUNT(*) AS total_alunos,
+        SUM(CASE
+            WHEN situacao_pagamento = 'Atrasado' THEN 1
+            ELSE 0
+        END) AS total_atrasados,
+        SUM(CASE
+            WHEN situacao_pagamento = 'Em dia' THEN 1
+            ELSE 0
+        END) AS total_em_dia,
+        (SUM(CASE
+            WHEN situacao_pagamento = 'Atrasado' THEN 1
+            ELSE 0
+        END) / COUNT(*)) * 100 AS porcentagem_atrasados,
+        (SUM(CASE
+            WHEN situacao_pagamento = 'Em dia' THEN 1
+            ELSE 0
+        END) / COUNT(*)) * 100 AS porcentagem_em_dia,
+        ((SUM(CASE
+            WHEN situacao_pagamento = 'Atrasado' THEN 1
+            ELSE 0
+        END) + SUM(CASE
+            WHEN situacao_pagamento = 'Em dia' THEN 1
+            ELSE 0
+        END)) / COUNT(*)) * 100 AS porcentagem_total
+    FROM
+        (SELECT 
+            estudante.id_estudante,
+                cadastro.Nome AS nome_estudante,
+                curso.nome_curso,
+                CASE
+                    WHEN dias_atraso IS NULL THEN 'Em dia'
+                    ELSE 'Atrasado'
+                END AS situacao_pagamento
+        FROM
+            estudante
+        JOIN cadastro ON estudante.id_cadastro = cadastro.id_cadastro
+        JOIN curso ON estudante.id_curso = curso.id_curso
+        LEFT JOIN financeiro ON estudante.id_estudante = financeiro.id_estudante) AS subquery;
