@@ -22,7 +22,7 @@ FROM
 WHERE
     total_turmas > 1;
 
--- pergunta 4 selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
+-- pergunta 4 Selecione a porcentagem de estudantes com status de aprovado agrupados por turma. 
 SELECT 
     nota.id_estudante,
     SUM(CASE
@@ -55,3 +55,23 @@ select estudante.* from estudante where id_turma = 3;
         financeiro
     WHERE
         data_pagamento BETWEEN '2020-03-08' AND '2022-11-30';
+
+-- pergunta 10 -  Quais alunos estão com pagamento em dia e atrasado.    
+
+    SELECT 
+    estudante.id_estudante,
+    cadastro.Nome, cadastro.Sobrenome AS Sobrenome,
+    curso.nome_curso,
+    CASE
+        WHEN dias_atraso IS null THEN 'Em dia'
+        ELSE 'atrasado'
+    END AS situacao_pagamento
+        FROM
+    estudante 
+        JOIN
+    cadastro ON estudante.id_cadastro = cadastro.id_cadastro
+        JOIN
+    curso  ON estudante.id_curso = curso.id_curso
+        LEFT JOIN
+    financeiro  ON estudante.id_estudante = financeiro.id_estudante
+        ORDER BY curso.nome_curso, estudante.id_estudante;
