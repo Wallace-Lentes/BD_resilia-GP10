@@ -16,7 +16,7 @@ CREATE VIEW ViewPorcentagemEvasao AS
         estudante
     GROUP BY id_turma;
 
-    -- pergunta 5 -porcentage de aprovados por turma
+    -- pergunta 5 -Porcentagem de aprovados por turma
 
 SELECT COUNT(*) as total_aprovados FROM nota WHERE conceito = 'aprovado';
 
@@ -34,7 +34,7 @@ CREATE VIEW ViweAprovados AS
     FROM
         nota;
 
-    -- pergunta 6: top 15 melhores notas alunos.
+    -- pergunta 6: Top 15 melhores notas alunos.
 
     CREATE VIEW ViewTop15MelhoresNotas AS
     SELECT 
